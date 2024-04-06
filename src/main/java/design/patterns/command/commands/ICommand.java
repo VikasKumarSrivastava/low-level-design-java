@@ -1,4 +1,4 @@
-package design.patterns.command;
+package design.patterns.command.commands;
 
 public interface ICommand {
     void execute();

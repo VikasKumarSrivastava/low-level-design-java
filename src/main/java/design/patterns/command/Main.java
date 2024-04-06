@@ -1,13 +1,22 @@
 package design.patterns.command;
 
+import design.patterns.command.commands.light.Light;
+import design.patterns.command.commands.light.LightOffCommand;
+import design.patterns.command.commands.light.LightOnCommand;
+import design.patterns.command.commands.stereo.Stereo;
+
 public class Main {
     public static void main(String[] args) {
-        TV tv=new TV("ON");
+        RemoteControl remoteControl = new RemoteControl();
+        Light livingRoomLight = new Light("living room light");
+        Stereo stereo = new Stereo();
 
-        // remote creation
-        Remote remote = new Remote();
-        remote.setCommand(new TurnTVOnCommand(tv));
+        LightOffCommand lightOffCommand=new LightOffCommand(livingRoomLight);
+        LightOnCommand lightOnCommand =new LightOnCommand(livingRoomLight);
 
-        remote.pressButton();
+        remoteControl.setSlot(0, new Slot(lightOnCommand, lightOffCommand));
+        remoteControl.onButtonWasPushed(0);
+        remoteControl.offButtonWasPushed(0);
     }
 }
+
