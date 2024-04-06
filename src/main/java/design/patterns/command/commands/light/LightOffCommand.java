@@ -11,13 +11,13 @@ public class LightOffCommand implements ICommand {
 
     @Override
     public void execute() {
-        System.out.println("Turning off- " + light.getName());
+        System.out.println("Turning off- " + light.getPlace());
         this.light.off();
     }
 
     @Override
     public void undo() {
-        System.out.println("Turning on- " + light.getName());
+        System.out.println("Undo Turned on light- " + light.getPlace());
         this.light.on();
     }
 }

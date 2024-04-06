@@ -9,14 +9,12 @@ public class Main {
     public static void main(String[] args) {
         RemoteControl remoteControl = new RemoteControl();
         Light livingRoomLight = new Light("living room light");
-        Stereo stereo = new Stereo();
-
         LightOffCommand lightOffCommand=new LightOffCommand(livingRoomLight);
         LightOnCommand lightOnCommand =new LightOnCommand(livingRoomLight);
-
         remoteControl.setSlot(0, new Slot(lightOnCommand, lightOffCommand));
         remoteControl.onButtonWasPushed(0);
         remoteControl.offButtonWasPushed(0);
+        remoteControl.undoButtonWasPushed();
     }
 }
 

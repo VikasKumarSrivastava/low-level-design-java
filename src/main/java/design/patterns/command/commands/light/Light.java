@@ -1,21 +1,23 @@
 package design.patterns.command.commands.light;
 
 public class Light {
-    private String name;
+    private String place;
+    private String state;
 
-    public Light(String name) {
-        this.name = name;
+    public Light(String place) {
+        this.place = place;
+        this.state = "off";
     }
 
-    public void off(){
-
+    public void off() {
+        this.state = "off";
     }
 
-    public void on(){
-
+    public void on() {
+        this.state = "on";
     }
 
-    public String getName() {
-        return name;
+    public String getPlace() {
+        return place;
     }
 }
