@@ -1,26 +1,26 @@
 package design.patterns.mediator;
 
 public class Bidder implements Colleague {
-    private String name;
-    private AuctionMediator auctionMediator;
+    private String id;
+    private Mediator mediator;
 
-    public Bidder(String name, AuctionMediator auctionMediator) {
-        this.name = name;
-        this.auctionMediator = auctionMediator;
+    public Bidder(String id, Mediator mediator) {
+        this.id = id;
+        this.mediator = mediator;
+    }
+
+    @Override
+    public String getId() {
+        return this.id;
     }
 
     @Override
     public void placeBid(int amount) {
-        this.auctionMediator.placeBid(this, amount);
+        this.mediator.addBid(this, amount);
     }
 
     @Override
-    public void receiveBidNotification(int amount) {
-        System.out.println(this.name + ": Notification for bid for-" + amount);
-    }
-
-    @Override
-    public String getName() {
-        return this.name;
+    public void receiveNotification(Colleague colleague, int amount) {
+        System.out.println("Name: " + this.id + " :: " + colleague.getId() + "placed a bid of- " + amount);
     }
 }
