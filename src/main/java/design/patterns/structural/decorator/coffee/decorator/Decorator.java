@@ -1,4 +1,4 @@
-package design.patterns.structural.decorator.decorator;
+package design.patterns.structural.decorator.coffee.decorator;
 
 import design.patterns.structural.decorator.coffee.Coffee;
 

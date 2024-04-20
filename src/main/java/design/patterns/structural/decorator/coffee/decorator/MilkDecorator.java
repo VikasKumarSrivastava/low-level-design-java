@@ -1,4 +1,4 @@
-package design.patterns.structural.decorator.decorator;
+package design.patterns.structural.decorator.coffee.decorator;
 
 import design.patterns.structural.decorator.coffee.Coffee;
 
@@ -9,11 +9,11 @@ public class MilkDecorator extends Decorator {
 
     @Override
     public int getCost() {
-        return this.coffee.getCost() + 10;
+        return this.coffee.getCost() + 40;
     }
 
     @Override
     public String getDescription() {
-        return this.coffee.getDescription() + ", Milk";
+        return this.coffee.getDescription() + ", Addon: Milk";
     }
 }
