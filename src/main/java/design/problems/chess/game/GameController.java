@@ -9,8 +9,8 @@ import design.problems.chess.player.Player;
 import java.util.Scanner;
 
 public class GameController {
-    Game game;
-    Scanner scanner = new Scanner(System.in);
+    private Game game;
+    private static Scanner scanner = new Scanner(System.in);
 
     public Player start(Player playerA, Player playerB) {
         game = new Game(playerA, playerB);

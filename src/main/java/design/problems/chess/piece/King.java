@@ -1,7 +1,6 @@
 package design.problems.chess.piece;
 
 import design.problems.chess.Color;
-import design.problems.chess.Coordinate;
 import design.problems.chess.Move;
 
 public class King extends Piece{
