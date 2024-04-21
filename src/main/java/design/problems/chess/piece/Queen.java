@@ -5,8 +5,8 @@ import design.problems.chess.Coordinate;
 import design.problems.chess.Move;
 
 public class Queen extends Piece{
-    public Queen(Color color, Coordinate initialCoordinate) {
-        super(color, initialCoordinate);
+    public Queen(Color color) {
+        super(color);
     }
 
     @Override

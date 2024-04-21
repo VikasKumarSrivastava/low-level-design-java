@@ -37,35 +37,35 @@ public class Board {
         }
 
         for (int i = 0; i < BOARD_SIZE; ++i) {
-            board[1][i] = new Cell(new Pawn(a.getColor(), new Coordinate(1, i)));
-            board[6][i] = new Cell(new Pawn(b.getColor(), new Coordinate(6, i)));
+            board[1][i] = new Cell(new Pawn(a.getColor()));
+            board[6][i] = new Cell(new Pawn(b.getColor()));
         }
 
         // initialize pawns
-        board[0][0] = new Cell(new Rook(a.getColor(), new Coordinate(0, 0)));
-        board[0][7] = new Cell(new Rook(a.getColor(), new Coordinate(0, 7)));
-        board[7][0] = new Cell(new Rook(b.getColor(), new Coordinate(7, 0)));
-        board[7][7] = new Cell(new Rook(b.getColor(), new Coordinate(7, 7)));
+        board[0][0] = new Cell(new Rook(a.getColor()));
+        board[0][7] = new Cell(new Rook(a.getColor()));
+        board[7][0] = new Cell(new Rook(b.getColor()));
+        board[7][7] = new Cell(new Rook(b.getColor()));
 
         // initialize knights
-        board[0][1] = new Cell(new Knight(a.getColor(), new Coordinate(0, 1)));
-        board[0][6] = new Cell(new Knight(a.getColor(), new Coordinate(0, 6)));
-        board[7][1] = new Cell(new Knight(b.getColor(), new Coordinate(7, 1)));
-        board[7][6] = new Cell(new Knight(b.getColor(), new Coordinate(7, 6)));
+        board[0][1] = new Cell(new Knight(a.getColor()));
+        board[0][6] = new Cell(new Knight(a.getColor()));
+        board[7][1] = new Cell(new Knight(b.getColor()));
+        board[7][6] = new Cell(new Knight(b.getColor()));
 
         // initialize bisops
-        board[0][2] = new Cell(new Bisop(a.getColor(), new Coordinate(0, 2)));
-        board[0][5] = new Cell(new Bisop(a.getColor(), new Coordinate(0, 5)));
-        board[7][2] = new Cell(new Bisop(b.getColor(), new Coordinate(0, 2)));
-        board[7][5] = new Cell(new Bisop(b.getColor(), new Coordinate(7, 5)));
+        board[0][2] = new Cell(new Bisop(a.getColor()));
+        board[0][5] = new Cell(new Bisop(a.getColor()));
+        board[7][2] = new Cell(new Bisop(b.getColor()));
+        board[7][5] = new Cell(new Bisop(b.getColor()));
 
         // initialize queens
-        board[0][3] = new Cell(new Queen(a.getColor(), new Coordinate(0, 3)));
-        board[0][4] = new Cell(new King(a.getColor(), new Coordinate(0, 4)));
+        board[0][3] = new Cell(new Queen(a.getColor()));
+        board[0][4] = new Cell(new King(a.getColor()));
 
         // initialize kings
-        board[7][3] = new Cell(new Queen(b.getColor(), new Coordinate(7, 3)));
-        board[7][4] = new Cell(new King(b.getColor(), new Coordinate(7, 4)));
+        board[7][3] = new Cell(new Queen(b.getColor()));
+        board[7][4] = new Cell(new King(b.getColor()));
     }
 
     public Cell getCell(Coordinate coordinate) {

@@ -9,13 +9,11 @@ import design.problems.chess.Move;
 @Getter
 public abstract class Piece {
     private final Color color;
-    private final Coordinate initialCoordinate;
     @Setter
     private boolean isKilled;
 
-    public Piece(Color color, Coordinate initialCoordinate) {
+    public Piece(Color color) {
         this.color = color;
-        this.initialCoordinate = initialCoordinate;
         isKilled = false;
     }
 

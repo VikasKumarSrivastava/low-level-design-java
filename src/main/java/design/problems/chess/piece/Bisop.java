@@ -5,8 +5,8 @@ import design.problems.chess.Coordinate;
 import design.problems.chess.Move;
 
 public class Bisop extends Piece{
-    public Bisop(Color color, Coordinate initialCoordinate) {
-        super(color, initialCoordinate);
+    public Bisop(Color color) {
+        super(color);
     }
 
     @Override

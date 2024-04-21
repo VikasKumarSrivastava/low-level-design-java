@@ -6,8 +6,8 @@ import design.problems.chess.Move;
 
 public class Pawn extends Piece {
 
-    public Pawn(Color color, Coordinate initialCoordinate) {
-        super(color, initialCoordinate);
+    public Pawn(Color color) {
+        super(color);
     }
 
     @Override
